@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- ========== Arguments ========== -->
+  <!-- Dataset -->
+  <arg name="use_doals" default="true" />  <!-- Which dataset to play -->
+  <arg name="bag_file" default="/home/$(env USER)/data/DOALS/hauptgebaeude/sequence_1/bag.bag" />  <!-- Full path to the bag file to play -->
+  <arg name="player_rate" default="1" />  <!-- Real time rate of bag being played -->
+  
+  <!-- Drift Simulation -->
+  <arg name="drift_simulation_rollout" default="" />  <!-- Leave empty to ignore drift or specify a rollout that matches the dataset bein played --> 
+  
+  <!-- Evaluation -->
+  <arg name="evaluate" default="false" />  <!-- Whether to save evaluation data -->  
+  <arg name="eval_output_path" default="/home/$(env USER)/dynablox_output" />  <!-- Where to save evaluation data  -->
+  <arg name="ground_truth_file" default="/home/$(env USER)/data/DOALS/hauptgebaeude/sequence_1/indices.csv" />  <!-- GT data file. Currently supports DOALS -->
+  
+  <!-- Motion Detector -->
+  <arg name="config_file" default="motion_detector/default.yaml" />  <!-- Configuration of Dynablox -->
+  <arg name="visualize" default="true" />  <!-- Whether to display RVIZ visualizations -->
+  
+    <arg name="robot_name" default="my_robot" />
+    <arg name="voxel_size" default="0.35" />
+    <arg name="voxels_per_side" default="16" />
+    <arg name="world_frame" default="world" />
+    <arg name="ray_length" default="7.5"/>
+
+  
+  <!-- ========== Run Nodes ========== -->
+  <!-- Auto-generated arguments -->
+  <arg name="use_drift" value="$(eval arg('drift_simulation_rollout')!='')" />
+
+  <!-- Play the data -->
+  <include file="$(find dynablox_ros)/launch/play_doals_data.launch" pass_all_args="true" if="$(arg use_doals)"/>   
+  <include file="$(find dynablox_ros)/launch/play_dynablox_data.launch" pass_all_args="true" unless="$(arg use_doals)"/> 
+   
+  <!-- Drift Simulation -->
+  <node name="drift_reader" pkg="drift_simulation" type="drift_reader" output="screen" args="--alsologtostderr" if="$(arg use_drift)">
+    <param name="drift_data_file_name" value="$(find drift_simulation)/config/rollouts/$(arg drift_simulation_rollout)" />
+  </node>
+
+  <!-- Motion Detection -->
+  <node name="motion_detector" pkg="dynablox_ros" type="motion_detector" output="screen" args="--alsologtostderr" required="true">
+  
+  
+    <remap from="pointcloud" to="/pointcloud_drifted" if="$(arg use_drift)" />
+    <!-- <remap from="pointcloud" to="great_sensor/my_pointcloud"/> -->
+
+    <remap from="voxblox/esdf_map_out" to="esdf_map" />
+    <param name="voxblox/tsdf_voxel_size" value="$(arg voxel_size)" />
+    <param name="voxblox/tsdf_voxels_per_side" value="$(arg voxels_per_side)" />
+    <param name="voxblox/publish_esdf_map" value="true" />
+    <param name="voxblox/publish_pointclouds" value="true" />
+    <param name="voxblox/use_tf_transforms" value="true" />
+    <param name="voxblox/update_mesh_every_n_sec" value="1.0" />
+    <param name="voxblox/clear_sphere_for_planning" value="true" />
+    <!-- <param name="voxblox/world_frame" value="$(arg world_frame)" /> -->
+    <param name="voxblox/max_ray_length_m" value="$(arg ray_length)" />
+
+
+    <!-- config -->
+    <rosparam command="load" file="$(find dynablox_ros)/config/$(arg config_file)" />
+
+
+
+    <!-- evaluation -->
+    <param name="evaluation/ground_truth/file_path" value="$(arg ground_truth_file)" />
+    <param name="evaluation/output_directory" value="$(arg eval_output_path)" />
+    <param name="evaluate" value="$(arg evaluate)" />    
+
+    <param name="publish_esdf_map" value="true" />
+
+
+
+  </node>
+  
+  <!-- Visualize -->
+  <include file="$(find dynablox_ros)/launch/visualizer.launch" if="$(arg visualize)"/> 
+
+</launch>
