@@ -3,6 +3,7 @@
 # Dynablox
 An online volumetric mapping-based approach for real-time detection of diverse dynamic objects in complex environments.
 
+![2024-06-16 11-19-51 的屏幕截图](https://github.com/9woods123/dynablox_esdf/assets/78521063/b3d6c434-104c-4e85-88a0-b4f77ea803ff)
 
 <p align="center">
   <img width='100%' src="https://user-images.githubusercontent.com/36043993/232650770-a042cbb9-c251-42f9-8a96-d7d9273fec96.gif">
