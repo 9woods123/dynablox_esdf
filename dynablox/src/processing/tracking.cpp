@@ -11,10 +11,14 @@ void Tracking::Config::setupParamsAndPrinting() {
 
 Tracking::Tracking(const Config& config) : config_(config.checkValid()) {}
 
+
 void Tracking::track(const Cloud& cloud, Clusters& clusters,
                      CloudInfo& cloud_info) {
+
   // Associate current to previous cluster ids.
   trackClusterIDs(cloud, clusters);
+  calculateTrackDuration(cloud_info.timestamp);
+
 
   // Label the cloud info.
   for (Cluster& cluster : clusters) {
@@ -28,12 +32,21 @@ void Tracking::track(const Cloud& cloud, Clusters& clusters,
 }
 
 
+void Tracking::calculateTrackDuration(std::uint64_t time_stamp){
+  // The duration is the time difference between two frames, 
+  //but I didn't process the first frame, so it is subtracted by a default initialized value.
+  
+  track_duration= time_stamp-last_track_timestamp;
+  last_track_timestamp= time_stamp;
+}
+
+
 void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
   
   //===========TODO=========== 
   //  calculate the velocity by duration .
+  //  Compute the centroids of all clusters.
 
-  // Compute the centroids of all clusters.
   std::vector<voxblox::Point> centroids(clusters.size());
   size_t i = 0;
   
@@ -102,7 +115,18 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     clusters[curr_id].id = previous_ids_[prev_id];
     clusters[curr_id].track_length = previous_track_lengths_[prev_id] + 1;
     clusters[curr_id].delta_distance=min;
-    clusters[curr_id].velocity=delta_distance_vector;
+    clusters[curr_id].velocity=delta_distance_vector/float(track_duration/10e9);
+
+    std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance: "<<clusters[curr_id].delta_distance<<std::endl;
+
+    std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance_vector: "<<delta_distance_vector<<std::endl;
+
+    std::cout<<"clusters"<<"["<<curr_id<<"].vel: "<<clusters[curr_id].velocity<<std::endl;
+    
+    std::cout<<"clusters"<<"["<<curr_id<<"].vel.norm: "
+    <<clusters[curr_id].delta_distance/float(track_duration/10e9)<<std::endl;
+
+
     reused_ids.insert(previous_ids_[prev_id]);
     distances.erase(distances.begin() + erase_i);
     for (auto& vec : distances) {

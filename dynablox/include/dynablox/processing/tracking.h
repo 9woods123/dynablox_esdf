@@ -36,9 +36,14 @@ class Tracking {
    */
   void track(const Cloud& cloud, Clusters& clusters, CloudInfo& cloud_info);
 
+  void calculateTrackDuration(std::uint64_t time_stamp);
+
  private:
   const Config config_;
-    std::chrono::steady_clock::time_point start_time_;
+  
+  std::uint64_t last_track_timestamp;
+  std::uint64_t track_duration;  // Nsec
+
   // Tracking data w.r.t. previous observation.
   std::vector<voxblox::Point> previous_centroids_;
   std::vector<int> previous_ids_;

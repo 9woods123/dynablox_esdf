@@ -132,9 +132,10 @@ void MotionDetector::setupRos() {
 
 void MotionDetector::pointcloudCallback(
     const sensor_msgs::PointCloud2::Ptr& msg) {
+  
   Timer frame_timer("frame");
   Timer detection_timer("motion_detection");
-
+  
   // Lookup cloud transform T_M_S of sensor (S) to map (M).
   // If different sensor frame is required, update the message.
   Timer tf_lookup_timer("motion_detection/tf_lookup");
@@ -162,6 +163,7 @@ void MotionDetector::pointcloudCallback(
   Timer setup_timer("motion_detection/indexing_setup");
   BlockToPointMap point_map;
   std::vector<voxblox::VoxelKey> occupied_ever_free_voxel_indices;
+  
   setUpPointMap(cloud, point_map, occupied_ever_free_voxel_indices, cloud_info);
   setup_timer.Stop();
 
@@ -188,14 +190,16 @@ void MotionDetector::pointcloudCallback(
   tf::transformTFToKindr(T_M_S, &T_G_C);
 
 
+
   sensor_msgs::PointCloud2::Ptr  static_object_pointcloud_msg=
   getStaticObjectPointcloud(msg,T_M_S,cloud,cloud_info);
+
   // The point cloud was obtained, and the points corresponding to dynamic obstacles were filtered out.
   // Only the  points corresponding to static obstacles are input into processPointCloudMessageAndInsert() 
   // for  building esdf_map.
+
   esdf_server_->processPointCloudMessageAndInsert(static_object_pointcloud_msg, T_G_C, false);
   esdf_server_->publishPointclouds();
-
 
   tsdf_timer.Stop();
   detection_timer.Stop();
@@ -219,6 +223,8 @@ void MotionDetector::pointcloudCallback(
     visualizer_->visualizeAll(cloud, cloud_info, clusters);
     vis_timer.Stop();
   }
+
+
 }
 
 bool MotionDetector::lookupTransform(const std::string& target_frame,
@@ -248,6 +254,7 @@ void MotionDetector::setUpPointMap(
   // Identifies for any LiDAR point the block it falls in and constructs the
   // hash-map block2points_map mapping each block to the LiDAR points that
   // fall into the block.
+  
   const voxblox::HierarchicalIndexIntMap block2points_map =
       buildBlockToPointsMap(cloud);
 
@@ -368,6 +375,7 @@ sensor_msgs::PointCloud2::Ptr MotionDetector::getStaticObjectPointcloud(
 // preprocessing_->processPointcloud(msg, T_M_S, cloud, cloud_info).
 // Therefore, T_M_S.inverse() is used to transform the cloud from the world frame to the sensor frame.
 
+
   pcl::PointCloud<pcl::PointXYZ> result_static_object;
 
   int i = -1;
@@ -393,6 +401,9 @@ sensor_msgs::PointCloud2::Ptr MotionDetector::getStaticObjectPointcloud(
     result_msg->header=raw_pointcloud_msg->header;
     static_object_pointcloud_pub.publish(result_msg);
   }
+
+
+
 
   return result_msg;
 }

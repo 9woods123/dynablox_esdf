@@ -2,7 +2,7 @@
 # General.
 #evaluate: true # Set by launch file
 #visualize: true # Set by launch file
-#num_threads: 1  # uses hardware concurrency if left empty.
+#num_threads: 12  # uses hardware concurrency if left empty.
 queue_size: 20
 shutdown_after: 10  # number evaluations.
   
