@@ -43,6 +43,9 @@ void Tracking::calculateTrackDuration(std::uint64_t time_stamp){
 
 void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
   
+  
+  std::cout<<"=============trackClusterIDs=============="<<std::endl;
+
   //===========TODO=========== 
   //  calculate the velocity by duration .
   //  Compute the centroids of all clusters.
@@ -65,7 +68,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     float distance;
     int previous_id;
     int current_id;
-    // Eigen::Vector3f delta_distance_vector;  
+    Eigen::Vector3f delta_distance_vector;  
   };
 
   std::vector<std::vector<Association>> distances(previous_centroids_.size());
@@ -75,6 +78,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     for (size_t j = 0; j < centroids.size(); ++j) {
       Association association;
       association.distance = (previous_centroids_[i] - centroids[j]).norm();
+      association.delta_distance_vector = centroids[j]-previous_centroids_[i] ;
       association.previous_id = i;
       association.current_id = j;
       d.push_back(association);
@@ -97,7 +101,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
         const Association& association = distances[i][j];
         if (association.distance < min) {
           min = association.distance;
-          delta_distance_vector=Eigen::Vector3f(centroids[j]-previous_centroids_[i]);
+          delta_distance_vector= association.delta_distance_vector;
           curr_id = association.current_id;
           prev_id = association.previous_id;
           erase_i = i;
@@ -115,19 +119,18 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     clusters[curr_id].id = previous_ids_[prev_id];
     clusters[curr_id].track_length = previous_track_lengths_[prev_id] + 1;
     clusters[curr_id].delta_distance=min;
-    clusters[curr_id].velocity=delta_distance_vector/float(track_duration/10e9);
+    clusters[curr_id].velocity=delta_distance_vector/float(track_duration/1e9f);
 
-    std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance: "<<clusters[curr_id].delta_distance<<std::endl;
 
-    std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance_vector: "<<delta_distance_vector<<std::endl;
-
-    std::cout<<"clusters"<<"["<<curr_id<<"].vel: "<<clusters[curr_id].velocity<<std::endl;
-    
-    std::cout<<"clusters"<<"["<<curr_id<<"].vel.norm: "
-    <<clusters[curr_id].delta_distance/float(track_duration/10e9)<<std::endl;
-
+    // std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance: "<<clusters[curr_id].delta_distance<<std::endl;
+    // std::cout<<"clusters"<<"["<<curr_id<<"].ddvector.norm():  "<<delta_distance_vector.norm()<<std::endl;
+    // std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance_vector: "<<delta_distance_vector<<std::endl;
+    // std::cout<<"clusters"<<"["<<curr_id<<"].vel: "<<clusters[curr_id].velocity<<std::endl;
+    // std::cout<<"clusters"<<"["<<curr_id<<"].vel.norm: "<<clusters[curr_id].delta_distance/float(track_duration/1e9f)<<std::endl;
 
     reused_ids.insert(previous_ids_[prev_id]);
+
+    // remove elements which has been found as the same object;
     distances.erase(distances.begin() + erase_i);
     for (auto& vec : distances) {
       vec.erase(vec.begin() + erase_j);

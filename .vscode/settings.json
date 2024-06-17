@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/easylab/easyLab/dynablox_ws/src/dynablox_esdf/dynablox_ros",
+    "cmake.sourceDirectory": "/home/woods/uuv/dynablox_ws/src/dynablox_esdf/dynablox_ros",
     "cmake.configureOnOpen": true,
     "files.associations": {
         "cctype": "cpp",
@@ -67,6 +67,7 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "strstream": "cpp"
     }
 }
