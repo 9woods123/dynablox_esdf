@@ -158,6 +158,7 @@ void MotionVisualizer::visualizeClusters(const Clusters& clusters,
   size_t id = 0;
   for (const Cluster& cluster : clusters) {
     if (cluster.points.size() > 1u) {
+
       visualization_msgs::Marker msg;
       msg.action = visualization_msgs::Marker::ADD;
       msg.id = id++;
@@ -203,48 +204,37 @@ void MotionVisualizer::visualizeClusters(const Clusters& clusters,
       msg.points.push_back(setPoint(base + dx + dy + dz));
       array_msg.markers.push_back(msg);
 
+      const Eigen::Vector3f centroid_pose = base + 0.5* delta;
+      visualization_msgs::Marker velocity_marker;
+      velocity_marker.action = visualization_msgs::Marker::ADD;
+      velocity_marker.id = id++;
+      velocity_marker.ns = ns;
+      velocity_marker.header.stamp = getStamp();
+      velocity_marker.header.frame_id = config_.global_frame_name;
+      
+      velocity_marker.type = visualization_msgs::Marker::LINE_LIST;
+      velocity_marker.color = msg.color;
+      velocity_marker.pose.orientation.w = 1.f;
 
+      velocity_marker.scale.x = 0.1;  
+      velocity_marker.scale.y = 0.2;  
+      velocity_marker.scale.z = 0.1;  
 
-        // // create  Marker for draw velocity
-        // visualization_msgs::Marker velocity_marker;
-        // velocity_marker.action = visualization_msgs::Marker::ADD;
-        // velocity_marker.id = id++;
-        // velocity_marker.ns = ns;
-        // velocity_marker.header.stamp = getStamp();
-        // velocity_marker.header.frame_id = config_.global_frame_name;
-        // velocity_marker.type = visualization_msgs::Marker::LINE_LIST;
-        // velocity_marker.color = setColor(color_map_.colorLookup(cluster.id));
-        // velocity_marker.scale.x = config_.cluster_line_width;
-        // velocity_marker.pose.orientation.w = 1.f;
+      geometry_msgs::Point start_point;
+      start_point.x = centroid_pose.x();
+      start_point.y = centroid_pose.y();
+      start_point.z = centroid_pose.z();
 
+      geometry_msgs::Point end_point;
+      Eigen::Vector3f velocity_vector=cluster.velocity;   //  Velocity calculated under linear assumption
+      end_point.x = centroid_pose.x() + velocity_vector.x();
+      end_point.y = centroid_pose.y() + velocity_vector.y();
+      end_point.z = centroid_pose.z() + 0*velocity_vector.z();
 
+      velocity_marker.points.push_back(start_point);
+      velocity_marker.points.push_back(end_point);
 
-
-        // velocity_marker.type = visualization_msgs::Marker::ARROW;
-        // velocity_marker.action = visualization_msgs::Marker::ADD;
-        // velocity_marker.pose.position.x = aabb_marker.pose.position.x;
-        // velocity_marker.pose.position.y = aabb_marker.pose.position.y;
-        // velocity_marker.pose.position.z = aabb_marker.pose.position.z;
-
-        // velocity_marker.scale.x = 0.1;  // 箭头杆的直径
-        // velocity_marker.scale.y = 0.2;  // 箭头头部的直径
-        // velocity_marker.scale.z = 0.0;  // 忽略，箭头类型不需要z方向的比例
-        // velocity_marker.color.r = 1.0;
-        // velocity_marker.color.g = 0.0;
-        // velocity_marker.color.b = 0.0;
-        // velocity_marker.color.a = 1.0;
-        // geometry_msgs::Point start_point, end_point;
-        // start_point.x = aabb_marker.pose.position.x;
-        // start_point.y = aabb_marker.pose.position.y;
-        // start_point.z = aabb_marker.pose.position.z;
-        // end_point.x = start_point.x + cluster.velocity.x;
-        // end_point.y = start_point.y + cluster.velocity.y;
-        // end_point.z = start_point.z + cluster.velocity.z;
-        // velocity_marker.points.push_back(start_point);
-        // velocity_marker.points.push_back(end_point);
-        // marker_array.markers.push_back(velocity_marker);
-
-
+      array_msg.markers.push_back(velocity_marker);
 
     }
     visualization_msgs::Marker msg;

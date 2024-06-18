@@ -68,6 +68,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "bit": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "core": "cpp"
     }
 }

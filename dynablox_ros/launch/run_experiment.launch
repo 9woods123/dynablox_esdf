@@ -20,10 +20,10 @@
   <arg name="visualize" default="true" />  <!-- Whether to display RVIZ visualizations -->
   
     <arg name="robot_name" default="my_robot" />
-    <arg name="voxel_size" default="0.3" />
+    <arg name="voxel_size" default="0.4" />
     <arg name="voxels_per_side" default="16" />
     <arg name="world_frame" default="world" />
-    <arg name="ray_length" default="10"/>
+    <arg name="ray_length" default="6"/>
 
   
   <!-- ========== Run Nodes ========== -->
@@ -52,13 +52,16 @@
     <param name="voxblox/publish_esdf_map" value="true" />
     <param name="voxblox/publish_pointclouds" value="true" />
     <param name="voxblox/use_tf_transforms" value="true" />
-    <param name="voxblox/update_mesh_every_n_sec" value="1.0" />
+    <param name="voxblox/update_mesh_every_n_sec" value="0.0" />
+    <param name="voxblox/update_esdf_every_n_sec" value="0.0" />
+    
+    <!--  update esdf in other parallel process node -->
+
     <param name="voxblox/clear_sphere_for_planning" value="true" />
-    <!-- <param name="voxblox/world_frame" value="$(arg world_frame)" /> -->
+    <param name="voxblox/world_frame" value="$(arg world_frame)" />
     <param name="voxblox/max_ray_length_m" value="$(arg ray_length)" />
     <param name="voxblox/method" value="fast" />
-
-    <!-- <param name="voxblox/verbose" value="true" /> -->
+    <param name="voxblox/verbose" value="false" />
 
     <!-- config -->
     <rosparam command="load" file="$(find dynablox_ros)/config/$(arg config_file)" />

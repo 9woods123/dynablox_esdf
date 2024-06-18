@@ -79,11 +79,10 @@ void MotionDetector::setupMembers() {
   esdf_server_=std::make_shared<voxblox::EsdfServer>(nh_voxblox, nh_voxblox);
   esdf_server_->setTraversabilityRadius(3);
   esdf_server_->publishTraversable();
-  
-  // tsdf_server_ = esdf_server_.
-
   tsdf_layer_.reset(esdf_server_->getTsdfMapPtr()->getTsdfLayerPtr());
 
+  // tsdf_server_ = std::make_shared<voxblox::TsdfServer>(nh_voxblox, nh_voxblox);
+  // tsdf_layer_.reset(tsdf_server_->getTsdfMapPtr()->getTsdfLayerPtr());
 
   // Preprocessing.
   preprocessing_ = std::make_shared<Preprocessing>(
@@ -132,7 +131,7 @@ void MotionDetector::setupRos() {
 
 void MotionDetector::pointcloudCallback(
     const sensor_msgs::PointCloud2::Ptr& msg) {
-  
+  auto start = std::chrono::high_resolution_clock::now();
   Timer frame_timer("frame");
   Timer detection_timer("motion_detection");
   
@@ -190,16 +189,25 @@ void MotionDetector::pointcloudCallback(
   tf::transformTFToKindr(T_M_S, &T_G_C);
 
 
-
   sensor_msgs::PointCloud2::Ptr  static_object_pointcloud_msg=
   getStaticObjectPointcloud(msg,T_M_S,cloud,cloud_info);
+  auto end = std::chrono::high_resolution_clock::now();
+  std::chrono::milliseconds elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
+  std::cout << "dynablox cost time: " << elapsed.count() << " ms\n";
   // The point cloud was obtained, and the points corresponding to dynamic obstacles were filtered out.
   // Only the  points corresponding to static obstacles are input into processPointCloudMessageAndInsert() 
   // for  building esdf_map.
 
+  auto start_insert_pc = std::chrono::high_resolution_clock::now();
+
   esdf_server_->processPointCloudMessageAndInsert(static_object_pointcloud_msg, T_G_C, false);
   esdf_server_->publishPointclouds();
+  // tsdf_server_->processPointCloudMessageAndInsert(static_object_pointcloud_msg, T_G_C, false);
+
+  auto end_insert_pc = std::chrono::high_resolution_clock::now();
+  std::chrono::milliseconds elapsed_insert_pc= std::chrono::duration_cast<std::chrono::milliseconds>(end_insert_pc - start_insert_pc);
+  std::cout << "insert cost time: " << elapsed_insert_pc.count() << " ms\n";
 
   tsdf_timer.Stop();
   detection_timer.Stop();
@@ -401,7 +409,6 @@ sensor_msgs::PointCloud2::Ptr MotionDetector::getStaticObjectPointcloud(
     result_msg->header=raw_pointcloud_msg->header;
     static_object_pointcloud_pub.publish(result_msg);
   }
-
 
 
 
