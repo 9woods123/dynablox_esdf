@@ -44,13 +44,16 @@ void Tracking::calculateTrackDuration(std::uint64_t time_stamp){
 }
 
 
+
+
 void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
   
   
   // std::cout<<"=============trackClusterIDs=============="<<std::endl;
 
-
   std::vector<voxblox::Point> centroids(clusters.size());
+  std::vector<int> clusters_point_size(clusters.size());
+
   size_t i = 0;
   
   for (const Cluster& cluster : clusters) {
@@ -59,6 +62,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
       const Point& point = cloud[index];
       centroid = centroid + voxblox::Point(point.x, point.y, point.z);
     }
+    clusters_point_size[i]=cluster.points.size();
     centroids[i] = centroid / cluster.points.size();
     ++i;
   }
@@ -69,6 +73,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     int previous_id;
     int current_id;
     Eigen::Vector3f delta_distance_vector;  
+    
   };
 
   std::vector<std::vector<Association>> distances(previous_centroids_.size());
@@ -116,14 +121,16 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     }
 
     // Update traked cluster and remove that match to search for next best.
-    // clusters[curr_id].id = previous_ids_[prev_id];
-    clusters[curr_id].id = prev_id;
+
+    clusters[curr_id].id = previous_ids_[prev_id];
     clusters[curr_id].track_length = previous_track_lengths_[prev_id] + 1;
-    clusters[curr_id].delta_distance=min;
-    clusters[curr_id].velocity=delta_distance_vector/float(track_duration/1e9f);
+    clusters[curr_id].delta_distance = min;
+    clusters[curr_id].velocity = (clusters[curr_id].track_length > 3)
+        ? Eigen::Vector3f(delta_distance_vector / static_cast<float>(track_duration / 1e9f))
+        : Eigen::Vector3f::Zero();
 
 
-    std::cout<<"clus"<<"["<<curr_id<<"]"<<"track_length: "<< clusters[curr_id].track_length 
+    std::cout<<"clus id: "<<clusters[curr_id].id<<"  track_length: "<< clusters[curr_id].track_length 
     <<"   delta_dist: "<<clusters[curr_id].delta_distance<<std::endl;
 
     // std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance: "<<clusters[curr_id].delta_distance<<std::endl;
@@ -132,8 +139,8 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     // std::cout<<"clusters"<<"["<<curr_id<<"].vel: "<<clusters[curr_id].velocity<<std::endl;
     // std::cout<<"clusters"<<"["<<curr_id<<"].vel.norm: "<<clusters[curr_id].delta_distance/float(track_duration/1e9f)<<std::endl;
 
-    // reused_ids.insert(previous_ids_[prev_id]);
-    reused_ids.insert(clusters[curr_id].id);
+    reused_ids.insert(previous_ids_[prev_id]);
+    // reused_ids.insert(clusters[curr_id].id);
     // remove elements which has been found as the same object;
     distances.erase(distances.begin() + erase_i);
     for (auto& vec : distances) {

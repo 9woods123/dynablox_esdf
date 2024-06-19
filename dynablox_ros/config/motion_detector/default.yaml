@@ -31,8 +31,8 @@ clustering:
   
 # Tracking.
 tracking:
-  min_track_duration: 0 # frames
-  max_tracking_distance: 1  # m
+  min_track_duration: 1 # frames
+  max_tracking_distance: 0.25  # m
   
 # Evaluation.
 evaluation:

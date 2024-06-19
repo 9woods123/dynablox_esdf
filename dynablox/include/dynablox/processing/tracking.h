@@ -3,6 +3,8 @@
 
 #include "dynablox/3rd_party/config_utilities.hpp"
 #include "dynablox/common/types.h"
+#include "dynablox/common/kalman_filter.h"
+
 
 namespace dynablox {
 
@@ -38,9 +40,16 @@ class Tracking {
 
   void calculateTrackDuration(std::uint64_t time_stamp);
 
+  void initializeKalmanFilter(double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
+                                const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
+                                const Eigen::MatrixXd& R, const Eigen::MatrixXd& P) {
+        kalman_filter = KalmanFilter(dt, A, B, H, Q, R, P);
+    };
+
+
  private:
   const Config config_;
-  
+  KalmanFilter kalman_filter;
   std::uint64_t last_track_timestamp;
   std::uint64_t track_duration;  // Nsec
 
