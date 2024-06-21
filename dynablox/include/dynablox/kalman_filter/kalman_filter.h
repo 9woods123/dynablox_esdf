@@ -14,6 +14,8 @@ public:
           m(0), n(0), dt(0), initialized(false), I(Eigen::MatrixXd()),
           x_hat(Eigen::VectorXd()), x_hat_new(Eigen::VectorXd()) {}
     
+
+
     KalmanFilter(double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
                  const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
                  const Eigen::MatrixXd& R, const Eigen::MatrixXd& P)
@@ -23,6 +25,15 @@ public:
         I.setIdentity();
     }
     
+
+
+    void setMotionModel(const Eigen::MatrixXd& A_input, const Eigen::MatrixXd& B_input)
+    {
+        A=A_input;
+        B=B_input;
+    }
+
+
     void init() {
         x_hat.setZero();
         P = P0;
@@ -37,18 +48,22 @@ public:
         initialized = true;
     }
 
-    void update(const Eigen::VectorXd& y, const Eigen::VectorXd& u) {
-        if (!initialized)
-            throw std::runtime_error("Filter is not initialized!");
 
-        // 预测阶段
+    bool update(const Eigen::VectorXd& y, const Eigen::VectorXd& u) {
+        
+        if (!initialized)
+            // throw std::runtime_error("Filter is not initialized!");
+            return false;
+        
+            
+        // predict
         x_hat_new = A * x_hat + B * u;
         P = A * P * A.transpose() + Q;
 
-        // 计算卡尔曼增益
+        // kalman gain
         K = P * H.transpose() * (H * P * H.transpose() + R).inverse();
 
-        // 更新阶段
+        // updaye
         x_hat_new += K * (y - H * x_hat_new);
         P = (I - K * H) * P;
 
@@ -56,6 +71,7 @@ public:
 
         t += dt;
     }
+
 
     Eigen::VectorXd state() const { return x_hat; }
     double time() const { return t; }

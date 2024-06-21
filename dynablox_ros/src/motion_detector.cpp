@@ -194,7 +194,7 @@ void MotionDetector::pointcloudCallback(
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::milliseconds elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
-  std::cout << "dynablox cost time: " << elapsed.count() << " ms\n";
+  // std::cout << "dynablox cost time: " << elapsed.count() << " ms\n";
   // The point cloud was obtained, and the points corresponding to dynamic obstacles were filtered out.
   // Only the  points corresponding to static obstacles are input into processPointCloudMessageAndInsert() 
   // for  building esdf_map.
@@ -207,7 +207,7 @@ void MotionDetector::pointcloudCallback(
 
   auto end_insert_pc = std::chrono::high_resolution_clock::now();
   std::chrono::milliseconds elapsed_insert_pc= std::chrono::duration_cast<std::chrono::milliseconds>(end_insert_pc - start_insert_pc);
-  std::cout << "insert cost time: " << elapsed_insert_pc.count() << " ms\n";
+  // std::cout << "insert cost time: " << elapsed_insert_pc.count() << " ms\n";
 
   tsdf_timer.Stop();
   detection_timer.Stop();

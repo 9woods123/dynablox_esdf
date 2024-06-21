@@ -3,10 +3,12 @@
 
 #include "dynablox/3rd_party/config_utilities.hpp"
 #include "dynablox/common/types.h"
-#include "dynablox/common/kalman_filter.h"
+#include "dynablox/kalman_filter/filter_manager.h"
 
 
 namespace dynablox {
+
+
 
 class Tracking {
  public:
@@ -40,18 +42,24 @@ class Tracking {
 
   void calculateTrackDuration(std::uint64_t time_stamp);
 
-  void initializeKalmanFilter(double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
-                                const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
-                                const Eigen::MatrixXd& R, const Eigen::MatrixXd& P) {
-        kalman_filter = KalmanFilter(dt, A, B, H, Q, R, P);
-    };
+  // void initializeKalmanFilter(double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
+  //                               const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
+  //                               const Eigen::MatrixXd& R, const Eigen::MatrixXd& P) {
+  //       kalman_filter = KalmanFilter(dt, A, B, H, Q, R, P);
+  //   };
 
+
+  // void kalmanTracking(Eigen::Vector3f centroid_position, Eigen::Vector3f velocity);
+
+  // void setKalmanFilter();
 
  private:
   const Config config_;
-  KalmanFilter kalman_filter;
   std::uint64_t last_track_timestamp;
   std::uint64_t track_duration;  // Nsec
+
+  // store the filter coorsponding to each object 
+  TrackerFilterManager track_filter_manager;
 
   // Tracking data w.r.t. previous observation.
   std::vector<voxblox::Point> previous_centroids_;

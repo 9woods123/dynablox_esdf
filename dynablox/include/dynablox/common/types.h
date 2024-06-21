@@ -94,11 +94,27 @@ struct Cluster {
   int id = -1;                // ID of the cluster set during tracking.
   int track_length = 0;       // Frames this cluster has been tracked.
   float delta_distance=0;    //   Distance between two frames within the same cluster.
-  Eigen::Vector3f velocity=Eigen::Vector3f(0.0f, 0.0f, 0.0f);   //  Velocity calculated under linear assumption
+  Eigen::Vector3f position=Eigen::Vector3f(0.0f, 0.0f, 0.0f); 
+  Eigen::Vector3f velocity=Eigen::Vector3f(0.0f, 0.0f, 0.0f);//  Velocity calculated under linear assumption
+  Eigen::MatrixXd covariance_matrix;
+
   bool valid = false;         // Whether the cluster has met all cluster checks.
   BoundingBox aabb;           // Axis-aligned bounding box of the cluster.
   std::vector<int> points;    // Indices of points in cloud.
   std::vector<Point> voxels;  // Center points of voxels in this cluster.
+  
+  Cluster()
+      : covariance_matrix(6, 6) {  // Initialize covariance_matrix with dimensions
+
+        covariance_matrix <<
+            0.1, 0,   0,   0,   0,   0,
+            0,   0.1, 0,   0,   0,   0,
+            0,   0,   0.1, 0,   0,   0,
+            0,   0,   0,   0.1, 0,   0,
+            0,   0,   0,   0,   0.1, 0,
+            0,   0,   0,   0,   0,   0.1;
+ 
+  }
 };
 
 using Clusters = std::vector<Cluster>;
