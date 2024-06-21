@@ -136,6 +136,8 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
 
       clusters[curr_id].velocity=curr_centroid_velocity;
       clusters[curr_id].position=curr_centroid_position;
+      // if reach min track duration , start kalman fliter based tracker
+      addFilterTracker(clusters[curr_id].id);
 
     }
     else{
@@ -183,13 +185,49 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
     previous_ids_.push_back(cluster.id);
     previous_track_lengths_.push_back(cluster.track_length);
 
-    // track_filter_manager.addTracker()
   }
 
   
 
 }
 
+void Tracking::addFilterTracker(int cluster_id)
+{
+
+float dt=static_cast<float>(track_duration / 1e9f);
+Eigen::MatrixXd A(2, 2);
+A << 1,dt,
+      0, 1;
+
+Eigen::MatrixXd B(2, 1); 
+B << 0, 0;   // B 0,0 for no control input 
+// x_t+1= A * x_t + B u
+// P_t+1 = A* P * AT + Q
+
+Eigen::MatrixXd Q(2, 2);
+Q << 0.1, 0,
+      0, 0.1; 
+// Q: motion model Gaussian error
+
+Eigen::MatrixXd P(2, 2);
+P << 1, 0, 
+      0, 1;
+//  prrior error distrubtion
+
+
+// y=H *x + gaussion_error
+// gaussion_error ~ N(0,R)
+Eigen::MatrixXd H(2, 2);
+H << 1, 0, 
+      0, 1;
+
+Eigen::MatrixXd R(2, 2);
+R << 0.25, 0,
+      0, 0.25;
+
+track_filter_manager.addTracker(clusters[curr_id].id, A, B, H, Q, R, P);
+
+}
 
 // void Tracking::setKalmanFilter()
 // {

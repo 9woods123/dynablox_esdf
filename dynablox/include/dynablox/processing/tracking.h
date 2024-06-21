@@ -39,7 +39,7 @@ class Tracking {
    * @param cloud_info Cloud info to denote moving points.
    */
   void track(const Cloud& cloud, Clusters& clusters, CloudInfo& cloud_info);
-
+  void addFilterTracker(int cluster_id);
   void calculateTrackDuration(std::uint64_t time_stamp);
 
   // void initializeKalmanFilter(double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
