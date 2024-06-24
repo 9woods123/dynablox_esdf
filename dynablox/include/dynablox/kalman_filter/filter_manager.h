@@ -4,23 +4,41 @@
 #include <unordered_map>
 #include <memory>
 #include "kalman_filter.h"
+#include <chrono>
 
 class TrackerFilterManager {
 public:
-    TrackerFilterManager(){}
+    TrackerFilterManager(){
+        tracker_filters.clear();
+        disappeared_cluster_ids.clear();
+    }
 
-    void addTracker(int cluster_id,double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
-                 const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
-                 const Eigen::MatrixXd& R, const Eigen::MatrixXd& P)
-    {
+    void printMatrixInfo(const Eigen::MatrixXd& mat, const std::string& name) {
+        std::cout << name << " size: " << mat.rows() << "x" << mat.cols() << std::endl;
+    }
+
+    bool addTracker(int cluster_id,double dt, const Eigen::MatrixXd& A, const Eigen::MatrixXd& B,
+                const Eigen::MatrixXd& H, const Eigen::MatrixXd& Q,
+                const Eigen::MatrixXd& R, const Eigen::MatrixXd& P)
+    {   
         if (tracker_filters.find(cluster_id) == tracker_filters.end()) {
-            tracker_filters[cluster_id] = std::make_shared<KalmanFilter>(dt, A, B, H, Q, R, P);
+
+        std::shared_ptr<KalmanFilter> insert_filter = std::make_shared<KalmanFilter>(dt, A, B, H, Q, R, P);
+        tracker_filters.emplace(cluster_id,insert_filter);
+
+        return true;
+        }
+        else { 
+
+            return false; 
         }
     }
 
-
     void removeTracker(int cluster_id) {
+        if (tracker_filters.find(cluster_id) != tracker_filters.end()) {
         tracker_filters.erase(cluster_id);
+
+        }
     }
 
 
@@ -43,6 +61,7 @@ public:
     void clear(){
         tracker_filters.clear();
     }
+    
 
     Eigen::VectorXd getTrackerState(int cluster_id) {
         std::shared_ptr<KalmanFilter> filter = getTracker(cluster_id);
@@ -51,9 +70,44 @@ public:
         }
         throw std::runtime_error("Tracker not found");
     }
+    
+
+    void init_filiter_tracker(int cluster_id,double t0, const Eigen::VectorXd& x0) {
+        
+        std::shared_ptr<KalmanFilter> filter = getTracker(cluster_id);
+        if (filter) {
+            filter->init(t0, x0);
+        }
+
+    }
+
+    void clearDisappearedClusterIds() {
+        disappeared_cluster_ids.clear();
+    }
+
+    void markClusterAsDisappeared(int cluster_id) {
+        disappeared_cluster_ids.insert(cluster_id);
+    }
+
+
+    void debugManager()
+    {
+        
+        std::cout<<"===========debugManager======== s"<<std::endl;
+
+        for (const auto& pair : tracker_filters) {
+            int cluster_id = pair.first;
+            const auto& filter = pair.second;
+            std::cout << "Cluster ID: " << cluster_id << ", Filter state: " << filter->state().transpose() << std::endl;
+        }
+        std::cout<<"===========debugManager======== e"<<std::endl;
+
+    }
+
 
 private:
     std::unordered_map<int, std::shared_ptr<KalmanFilter>> tracker_filters;
+    std::unordered_set<int> disappeared_cluster_ids;
 
 };
 

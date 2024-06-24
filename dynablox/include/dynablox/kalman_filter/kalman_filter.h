@@ -8,11 +8,11 @@ class KalmanFilter {
 public:
 
     //  Default constructor 
-    KalmanFilter()
-        : A(Eigen::MatrixXd()), B(Eigen::MatrixXd()), H(Eigen::MatrixXd()),
-          Q(Eigen::MatrixXd()), R(Eigen::MatrixXd()), P0(Eigen::MatrixXd()),
-          m(0), n(0), dt(0), initialized(false), I(Eigen::MatrixXd()),
-          x_hat(Eigen::VectorXd()), x_hat_new(Eigen::VectorXd()) {}
+    // KalmanFilter()
+    //     : A(Eigen::MatrixXd()), B(Eigen::MatrixXd()), H(Eigen::MatrixXd()),
+    //       Q(Eigen::MatrixXd()), R(Eigen::MatrixXd()), P0(Eigen::MatrixXd()),
+    //       m(0), n(0), dt(0), initialized(false), I(Eigen::MatrixXd()),
+    //       x_hat(Eigen::VectorXd()), x_hat_new(Eigen::VectorXd()) {}
     
 
 
@@ -22,7 +22,7 @@ public:
         : A(A), B(B), H(H), Q(Q), R(R), P0(P),
           m(A.rows()), n(B.cols()), dt(dt), initialized(false),
           I(m, m), x_hat(m), x_hat_new(m) {
-        I.setIdentity();
+    I.setIdentity();
     }
     
 
@@ -77,11 +77,12 @@ public:
     double time() const { return t; }
 
 private:
-    Eigen::MatrixXd A, B, H, Q, R, P, K, P0, I;
-    Eigen::VectorXd x_hat, x_hat_new;
+    Eigen::MatrixXd A, B, H, Q, R, P, K, P0;
     double t0, t, dt;
     int m, n;
     bool initialized;
+    Eigen::MatrixXd I;
+    Eigen::VectorXd x_hat, x_hat_new;
 };
 
 #endif // KALMAN_FILTER_H

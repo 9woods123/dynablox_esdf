@@ -91,6 +91,8 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
 
   // Associate all previous ids until no more minimum distances exist.
   std::unordered_set<int> reused_ids;
+  std::unordered_set<int> current_ids;
+  
   while (true) {
     // Find the minimum distance and IDs (exhaustively).
     float min = std::numeric_limits<float>::max();
@@ -137,7 +139,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
       clusters[curr_id].velocity=curr_centroid_velocity;
       clusters[curr_id].position=curr_centroid_position;
       // if reach min track duration , start kalman fliter based tracker
-      addFilterTracker(clusters[curr_id].id);
+      FilterTracker(clusters[curr_id].id,curr_centroid_position,curr_centroid_velocity);
 
     }
     else{
@@ -145,23 +147,30 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
       clusters[curr_id].position=curr_centroid_position;
     }
 
-
-
     // std::cout<<"clus id: "<<clusters[curr_id].id<<"  track_length: "<< clusters[curr_id].track_length 
     // <<"   delta_dist: "<<clusters[curr_id].delta_distance<<std::endl;
-    // std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance: "<<clusters[curr_id].delta_distance<<std::endl;
-    // std::cout<<"clusters"<<"["<<curr_id<<"].ddvector.norm():  "<<delta_distance_vector.norm()<<std::endl;
-    // std::cout<<"clusters"<<"["<<curr_id<<"].delta_distance_vector: "<<delta_distance_vector<<std::endl;
-    // std::cout<<"clusters"<<"["<<curr_id<<"].vel: "<<clusters[curr_id].velocity<<std::endl;
-    // std::cout<<"clusters"<<"["<<curr_id<<"].vel.norm: "<<clusters[curr_id].delta_distance/float(track_duration/1e9f)<<std::endl;
+    
 
     reused_ids.insert(previous_ids_[prev_id]);
+    current_ids.insert(clusters[curr_id].id);
+
     // remove elements which has been found as the same object;
     distances.erase(distances.begin() + erase_i);
     for (auto& vec : distances) {
       vec.erase(vec.begin() + erase_j);
     }
   }
+
+  // mark the disappeared clusters, and delete these corrosponding trakcer filiters
+  for (int id : previous_ids_) {
+      if (current_ids.find(id) == current_ids.end()) {
+          // track_filter_manager.markClusterAsDisappeared(id);
+          track_filter_manager.removeTracker(id);
+      }
+  }
+  
+  track_filter_manager.debugManager();
+
 
   // Fill in all remaining ids and track data.
   previous_centroids_ = centroids;
@@ -187,14 +196,15 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
 
   }
 
-  
-
 }
 
-void Tracking::addFilterTracker(int cluster_id)
+void Tracking::FilterTracker(int cluster_id, Eigen::Vector3f curr_centroid_position,
+Eigen::Vector3f curr_centroid_velocity)
 {
 
+
 float dt=static_cast<float>(track_duration / 1e9f);
+
 Eigen::MatrixXd A(2, 2);
 A << 1,dt,
       0, 1;
@@ -214,7 +224,6 @@ P << 1, 0,
       0, 1;
 //  prrior error distrubtion
 
-
 // y=H *x + gaussion_error
 // gaussion_error ~ N(0,R)
 Eigen::MatrixXd H(2, 2);
@@ -225,54 +234,29 @@ Eigen::MatrixXd R(2, 2);
 R << 0.25, 0,
       0, 0.25;
 
-track_filter_manager.addTracker(clusters[curr_id].id, A, B, H, Q, R, P);
+
+Eigen::Vector3d curr_position = curr_centroid_position.cast<double>();  // 将 Eigen::Vector3f 转换为 Eigen::VectorXd
+Eigen::Vector3d curr_velocity = curr_centroid_velocity.cast<double>();  // 将 Eigen::Vector3f 转换为 Eigen::VectorXd
+
+// std::cout<<"curr_position:"<< curr_position << std::endl;
+
+bool is_new_cluster=track_filter_manager.addTracker(cluster_id,dt, A, B, H, Q, R, P);
+
+
+if (is_new_cluster)
+  {
+    // t0= 0 s;
+    std::cout<<"=========is_new_cluster: "<<is_new_cluster<<std::endl;
+
+    track_filter_manager.init_filiter_tracker(cluster_id,0,curr_position);
+
+  }
+
+// pdateTracker(int cluster_id, const Eigen::VectorXd& y, const Eigen::VectorXd& u) {
+
+// track_filter_manager.updateTracker(cluster_id,)
+
 
 }
-
-// void Tracking::setKalmanFilter()
-// {
-
-//     double dt = 0.1;
-//     Eigen::MatrixXd A(2, 2);
-//     A << 1,dt,
-//          0, 1;
-
-//     Eigen::MatrixXd B(2, 1); 
-//     B << 0, 0;   // B 0,0 for no control input 
-//     // x_t+1= A * x_t + B u
-//     // P_t+1 = A* P * AT + Q
-
-//     Eigen::MatrixXd Q(2, 2);
-//     Q << 0.1, 0,
-//          0, 0.1; 
-//     // Q: motion model Gaussian error
-
-//     Eigen::MatrixXd P(2, 2);
-//     P << 1, 0, 
-//          0, 1;
-//     //  prrior error distrubtion
-
-
-//     // y=H *x + gaussion_error
-//     // gaussion_error ~ N(0,R)
-//     Eigen::MatrixXd H(2, 2);
-//     H << 1, 0, 
-//          0, 1;
-
-//     Eigen::MatrixXd R(2, 2);
-//     R << 0.25, 0,
-//          0, 0.25;
-
-// initializeKalmanFilter(dt, A,  B, H, Q, R, P);
-
-// }
-
-// void Tracking::kalmanTracking(Eigen::Vector3f centroid_position, Eigen::Vector3f velocity)
-// {
-//   double dt = 0.1;
-//   if update
-
-// }
-
 
 }  // namespace dynablox
