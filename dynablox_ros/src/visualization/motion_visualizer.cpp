@@ -220,16 +220,30 @@ void MotionVisualizer::visualizeClusters(const Clusters& clusters,
       velocity_marker.scale.y = 0.2;  
       velocity_marker.scale.z = 0.1;  
 
+
+
+      // geometry_msgs::Point start_point;
+      // start_point.x = centroid_pose.x();
+      // start_point.y = centroid_pose.y();
+      // start_point.z = centroid_pose.z();
+
+      // geometry_msgs::Point end_point;
+      // Eigen::Vector3f velocity_vector=cluster.velocity;   //  Velocity calculated under linear assumption
+      // end_point.x = centroid_pose.x() + velocity_vector.x();
+      // end_point.y = centroid_pose.y() + velocity_vector.y();
+      // end_point.z = centroid_pose.z() + 0*velocity_vector.z();
+
       geometry_msgs::Point start_point;
-      start_point.x = centroid_pose.x();
-      start_point.y = centroid_pose.y();
-      start_point.z = centroid_pose.z();
+      start_point.x = cluster.position.x();
+      start_point.y = cluster.position.y();
+      start_point.z = cluster.position.z();
 
       geometry_msgs::Point end_point;
       Eigen::Vector3f velocity_vector=cluster.velocity;   //  Velocity calculated under linear assumption
-      end_point.x = centroid_pose.x() + velocity_vector.x();
-      end_point.y = centroid_pose.y() + velocity_vector.y();
-      end_point.z = centroid_pose.z() + 0*velocity_vector.z();
+      end_point.x = cluster.position.x() + velocity_vector.x();
+      end_point.y = cluster.position.y() + velocity_vector.y();
+      end_point.z = cluster.position.z() + velocity_vector.z();
+
 
       velocity_marker.points.push_back(start_point);
       velocity_marker.points.push_back(end_point);

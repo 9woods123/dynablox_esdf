@@ -135,11 +135,21 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
 
     if(clusters[curr_id].track_length > config_.min_track_duration)
     {
-
-      clusters[curr_id].velocity=curr_centroid_velocity;
-      clusters[curr_id].position=curr_centroid_position;
       // if reach min track duration , start kalman fliter based tracker
-      FilterTracker(clusters[curr_id].id,curr_centroid_position,curr_centroid_velocity);
+
+
+      // clusters[curr_id].velocity=curr_centroid_velocity;
+      // clusters[curr_id].position=curr_centroid_position;
+
+      
+
+      Eigen::Vector3f positer_position, positer_velcity;
+
+      FilterTracker(clusters[curr_id].id,curr_centroid_position,curr_centroid_velocity,
+      positer_position,positer_velcity);
+
+      clusters[curr_id].velocity=positer_velcity;
+      clusters[curr_id].position=positer_position;
 
     }
     else{
@@ -169,7 +179,7 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
       }
   }
   
-  track_filter_manager.debugManager();
+  // track_filter_manager.debugManager();
 
 
   // Fill in all remaining ids and track data.
@@ -198,47 +208,85 @@ void Tracking::trackClusterIDs(const Cloud& cloud, Clusters& clusters) {
 
 }
 
-void Tracking::FilterTracker(int cluster_id, Eigen::Vector3f curr_centroid_position,
-Eigen::Vector3f curr_centroid_velocity)
+void Tracking::FilterTracker(int cluster_id, 
+  Eigen::Vector3f curr_centroid_position, Eigen::Vector3f curr_centroid_velocity,
+  Eigen::Vector3f& positer_position, Eigen::Vector3f& positer_velocity)
 {
 
 
 float dt=static_cast<float>(track_duration / 1e9f);
 
-Eigen::MatrixXd A(2, 2);
-A << 1,dt,
-      0, 1;
+Eigen::MatrixXd A(6, 6);
 
-Eigen::MatrixXd B(2, 1); 
-B << 0, 0;   // B 0,0 for no control input 
+A <<  1, 0, 0, dt, 0, 0,
+      0, 1, 0, 0, dt, 0,
+      0, 0, 1, 0, 0, dt,
+      0, 0, 0, 1, 0, 0,
+      0, 0, 0, 0, 1, 0,
+      0, 0, 0, 0, 0, 1;
+
+Eigen::MatrixXd B(6, 1); 
+B << 0, 0, 0, 0, 0, 0;   
+// B 0,0 for no control input 
 // x_t+1= A * x_t + B u
 // P_t+1 = A* P * AT + Q
 
-Eigen::MatrixXd Q(2, 2);
-Q << 0.1, 0,
-      0, 0.1; 
+float p_e_v=0.2;  // position error variance
+float v_e_v=0.2; // velocity error variance
+
+Eigen::MatrixXd Q(6, 6);
+Q <<  p_e_v, 0, 0, 0, 0, 0,
+      0, p_e_v, 0, 0, 0, 0,
+      0, 0, p_e_v, 0, 0, 0,
+      0, 0, 0, v_e_v, 0, 0,
+      0, 0, 0, 0, v_e_v, 0,
+      0, 0, 0, 0, 0, v_e_v;
+
 // Q: motion model Gaussian error
 
-Eigen::MatrixXd P(2, 2);
-P << 1, 0, 
-      0, 1;
+
+Eigen::MatrixXd P(6, 6);
+P <<  p_e_v, 0, 0, 0, 0, 0,
+      0, p_e_v, 0, 0, 0, 0,
+      0, 0, p_e_v, 0, 0, 0,
+      0, 0, 0, v_e_v, 0, 0,
+      0, 0, 0, 0, v_e_v, 0,
+      0, 0, 0, 0, 0, v_e_v;
+
+
 //  prrior error distrubtion
 
 // y=H *x + gaussion_error
 // gaussion_error ~ N(0,R)
-Eigen::MatrixXd H(2, 2);
-H << 1, 0, 
-      0, 1;
 
-Eigen::MatrixXd R(2, 2);
-R << 0.25, 0,
-      0, 0.25;
+Eigen::MatrixXd H(6, 6);
+H <<  1, 0, 0, 0, 0, 0,
+      0, 1, 0, 0, 0, 0,
+      0, 0, 1, 0, 0, 0,
+      0, 0, 0, 1, 0, 0,
+      0, 0, 0, 0, 1, 0,
+      0, 0, 0, 0, 0, 1;
+
+
+
+Eigen::MatrixXd R(6, 6);
+
+float p_z_v=0.5;  // position observation error variance
+float v_z_v=0.65; // velocity observation error variance
+
+R <<  p_z_v, 0, 0, 0, 0, 0,
+      0, p_z_v, 0, 0, 0, 0,
+      0, 0, 2*p_z_v, 0, 0, 0,
+      0, 0, 0, v_z_v, 0, 0,
+      0, 0, 0, 0, v_z_v, 0,
+      0, 0, 0, 0, 0, 2*v_z_v;
 
 
 Eigen::Vector3d curr_position = curr_centroid_position.cast<double>();  // 将 Eigen::Vector3f 转换为 Eigen::VectorXd
 Eigen::Vector3d curr_velocity = curr_centroid_velocity.cast<double>();  // 将 Eigen::Vector3f 转换为 Eigen::VectorXd
 
-// std::cout<<"curr_position:"<< curr_position << std::endl;
+Eigen::Matrix<double, 6, 1> x_state;
+x_state << curr_position, curr_velocity;
 
 bool is_new_cluster=track_filter_manager.addTracker(cluster_id,dt, A, B, H, Q, R, P);
 
@@ -246,16 +294,24 @@ bool is_new_cluster=track_filter_manager.addTracker(cluster_id,dt, A, B, H, Q, R
 if (is_new_cluster)
   {
     // t0= 0 s;
-    std::cout<<"=========is_new_cluster: "<<is_new_cluster<<std::endl;
-
-    track_filter_manager.init_filiter_tracker(cluster_id,0,curr_position);
+    track_filter_manager.init_filiter_tracker(cluster_id,0,x_state);
+    return;
 
   }
 
-// pdateTracker(int cluster_id, const Eigen::VectorXd& y, const Eigen::VectorXd& u) {
 
-// track_filter_manager.updateTracker(cluster_id,)
+Eigen::Matrix<double, 6, 1> observation_state;
+observation_state=x_state;
 
+Eigen::Matrix<double, 6, 1> control_input;
+control_input<<0,0,0,0,0,0;
+
+track_filter_manager.updateTracker(cluster_id,observation_state,control_input);
+
+Eigen::Matrix<float, 6, 1>  postier_state=track_filter_manager.getTrackerState(cluster_id).cast<float>();
+
+positer_position = postier_state.head<3>();
+positer_velocity = postier_state.tail<3>();
 
 }
 
