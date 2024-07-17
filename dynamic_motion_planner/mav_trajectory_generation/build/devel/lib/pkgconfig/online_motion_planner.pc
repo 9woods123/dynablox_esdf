@@ -1,0 +1,8 @@
+prefix=/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel
+
+Name: online_motion_planner
+Description: Description of online_motion_planner
+Version: 0.0.0
+Cflags: -I/home/woods/uuv/motion_planner_ws/src/online_motion_planner/include
+Libs: -L${prefix}/lib -lonline_motion_planner
+Requires: roscpp std_msgs hybrid_astar voxblox_ros

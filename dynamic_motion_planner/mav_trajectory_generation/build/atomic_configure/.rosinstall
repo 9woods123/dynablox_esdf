@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/setup.sh

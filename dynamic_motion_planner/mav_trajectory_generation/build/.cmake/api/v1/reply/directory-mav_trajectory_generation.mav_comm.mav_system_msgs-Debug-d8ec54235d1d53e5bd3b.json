@@ -1,0 +1,332 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"install",
+			"add_message_files",
+			"generate_messages",
+			"include",
+			"_catkin_package",
+			"catkin_package"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"mav_trajectory_generation/mav_comm/mav_system_msgs/CMakeLists.txt",
+			"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/cmake/mav_system_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_package.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 127,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 228,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 4
+			},
+			{
+				"file" : 3,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 243,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 9
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 254,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 265,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 276,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 286,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 288,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 19
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 102,
+				"parent" : 21
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 450,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 23
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 496,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 25
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 521,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 27
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 529,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 29
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "share/mav_system_msgs/msg",
+			"paths" : 
+			[
+				"mav_trajectory_generation/mav_comm/mav_system_msgs/msg/CpuInfo.msg",
+				"mav_trajectory_generation/mav_comm/mav_system_msgs/msg/ProcessInfo.msg"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "share/mav_system_msgs/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/catkin_generated/installspace/mav_system_msgs-msg-paths.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/devel/include/mav_system_msgs"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "share/roseus/ros",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/devel/share/roseus/ros/mav_system_msgs"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "share/common-lisp/ros",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/devel/share/common-lisp/ros/mav_system_msgs"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "share/gennodejs/ros",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/devel/share/gennodejs/ros/mav_system_msgs"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "lib/python2.7/dist-packages",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/devel/lib/python2.7/dist-packages/mav_system_msgs"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 24,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/catkin_generated/installspace/mav_system_msgs.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "share/mav_system_msgs/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/catkin_generated/installspace/mav_system_msgs-msg-extras.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "share/mav_system_msgs/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/catkin_generated/installspace/mav_system_msgsConfig.cmake",
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_system_msgs/catkin_generated/installspace/mav_system_msgsConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Unspecified",
+			"destination" : "share/mav_system_msgs",
+			"paths" : 
+			[
+				"mav_trajectory_generation/mav_comm/mav_system_msgs/package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_system_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_system_msgs"
+	}
+}

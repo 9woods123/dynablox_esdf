@@ -1,0 +1,89 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"catkin_run_tests_target",
+			"_catkin_add_google_test",
+			"catkin_add_gtest"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/test/tests.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/test/gtest.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 98,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 185,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "clean_test_results_mav_trajectory_generation::@4b21fcb9a33f9780df9d",
+	"name" : "clean_test_results_mav_trajectory_generation",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation/CMakeFiles/clean_test_results_mav_trajectory_generation",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation/CMakeFiles/clean_test_results_mav_trajectory_generation.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,246 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_msgs/cmake/mav_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"mav_trajectory_generation/mav_comm/mav_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 519,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 522,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 134,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 138,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 140,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 144,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_cpp::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "geometry_msgs_generate_messages_cpp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_mav_msgs_generate_messages_check_deps_RateThrust::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_mav_msgs_generate_messages_check_deps_AttitudeThrust::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_mav_msgs_generate_messages_check_deps_Status::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_mav_msgs_generate_messages_check_deps_Actuators::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_mav_msgs_generate_messages_check_deps_FilteredSensorData::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_mav_msgs_generate_messages_check_deps_GpsWaypoint::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_mav_msgs_generate_messages_check_deps_TorqueThrust::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_mav_msgs_generate_messages_check_deps_RollPitchYawrateThrust::@c4cdea4336a7b1af7337"
+		}
+	],
+	"id" : "mav_msgs_generate_messages_cpp::@c4cdea4336a7b1af7337",
+	"name" : "mav_msgs_generate_messages_cpp",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_msgs/CMakeFiles/mav_msgs_generate_messages_cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_msgs/CMakeFiles/mav_msgs_generate_messages_cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/Actuators.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/AttitudeThrust.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/FilteredSensorData.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/GpsWaypoint.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/RateThrust.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/RollPitchYawrateThrust.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/Status.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/include/mav_msgs/TorqueThrust.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

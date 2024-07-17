@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+    <arg name="robot_name" default="eca_a9"/>
+    <!-- planning params -->
+    
+    <arg name="planning_horizon" default="40"/>
+    <arg name="replan_horizon" default="12.5"/>
+    <arg name="replan_time_horizon" default="5"/>
+    <arg name="planning_resolution" default="0.85"/>
+    <arg name="radius_min" default="17.5"/>
+    <arg name="astar_iteration" default="15000" />
+    <arg name="bound_box_length" default="2" />
+    <arg name="bound_box_width" default="1" />
+    <arg name="bound_box_height" default="1" />
+    <arg name="collision_distance" default="1.5" />
+    <arg name="v_max" default="1.7" />
+    <arg name="a_max" default="0.35" />
+    <arg name="dt" default="0.5" />
+    <arg name="collision_radius" default="4"/>
+
+    <arg name="step_min" default="2"/>
+    <arg name="is_z_axis_considered_goal_check" default="false"/>
+
+
+  <!-- Evaluation -->
+  <arg name="evaluate" default="false" />  <!-- Whether to save evaluation data -->  
+  
+
+  <!-- Motion Detector -->
+  <arg name="config_file" default="motion_detector/default.yaml" />  <!-- Configuration of Dynablox -->
+  <arg name="visualize" default="true" />  <!-- Whether to display RVIZ visualizations -->
+
+  <arg name="voxel_size" default="0.2" />
+  <arg name="voxels_per_side" default="16" />
+  <arg name="world_frame" default="world_enu" />
+  <arg name="ray_length" default="12"/>
+  <arg name="method" default="projective"/>
+
+
+  <arg name="sensor_pointcloud" default="/airsim_node/drone_1/front_left_custom/DepthPlanar/registered/points"/>
+
+  <!-- Motion Detection -->
+  <node name="motion_detector" pkg="dynablox_ros" type="motion_detector" output="screen" args="--alsologtostderr" required="true">
+  
+    <remap from="pointcloud" to="$(arg sensor_pointcloud)"  />
+
+    <param name="voxblox/tsdf_voxel_size" value="$(arg voxel_size)" />
+    <param name="voxblox/tsdf_voxels_per_side" value="$(arg voxels_per_side)" />
+
+
+    <param name="voxblox/publish_esdf_map" value="true" />
+    <param name="voxblox/publish_pointclouds" value="true" />
+    <param name="voxblox/use_tf_transforms" value="true" />
+    <param name="voxblox/update_mesh_every_n_sec" value="1.0" />
+    <param name="voxblox/update_esdf_every_n_sec" value="1.0" />
+    
+
+    <!--  update esdf in other parallel process node -->
+    <param name="voxblox/clear_sphere_for_planning" value="true" />
+    <param name="voxblox/world_frame" value="$(arg world_frame)" />
+    <param name="voxblox/max_ray_length_m" value="$(arg ray_length)" />
+    <param name="voxblox/method" value="$(arg method)" />
+    <param name="voxblox/verbose" value="true" />
+
+    <!-- config -->
+    <rosparam command="load" file="$(find dynablox_ros)/config/$(arg config_file)" />
+
+    <param name="evaluate" value="$(arg evaluate)" />    
+  </node>
+  
+
+
+  <!-- Motion Planner -->
+
+<!-- <node name="online_motion_planner_node" pkg="online_motion_planner" type="online_motion_planner_node" output="screen">
+    
+    <remap from="online_motion_planner_node/esdf_map_in" to="/motion_detector/voxblox/esdf_map_out" />
+    <remap from="online_motion_planner_node/tsdf_map_in" to="/motion_detector/voxblox/tsdf_map_out" />
+    
+    <param name="world_frame" value="$(arg world_frame)" />
+    <param name="update_mesh_every_n_sec" value="1.0" />
+    <param name="use_tf_transforms" value="false" />
+    <param name="tsdf_voxel_size" value="$(arg voxel_size)" />
+    <param name="tsdf_voxels_per_side" value="$(arg voxels_per_side)" />
+    <param name="esdf_max_distance_m" value="3" />
+
+    <param name="robot_name" value="/$(arg robot_name)" />
+    <param name="planning_horizon" value="$(arg planning_horizon)" />
+    <param name="replan_horizon" value="$(arg replan_horizon)" />
+    <param name="replan_time_horizon" value="$(arg replan_time_horizon)" />
+
+    <param name="planning_resolution" value="$(arg planning_resolution)" />
+    <param name="radius_min" value="$(arg radius_min)" />
+    <param name="astar_iteration" value="$(arg astar_iteration)" />
+    <param name="is_z_axis_considered_goal_check" value="$(arg is_z_axis_considered_goal_check)" />
+
+    <param name="bound_box_length" value="$(arg bound_box_length)" />
+    <param name="bound_box_width" value="$(arg bound_box_width)" />
+    <param name="bound_box_height" value="$(arg bound_box_height)" />
+    <param name="collision_distance" value="$(arg collision_distance)" />
+    <param name="v_max" value="$(arg v_max)" />
+    <param name="a_max" value="$(arg a_max)" />
+    <param name="dt" value="$(arg dt)" />
+    <param name="step_min" value="$(arg step_min)" />
+
+    <remap from="robot_pose_topic" to="/$(arg robot_name)/ground_truth_to_tf_eca_a9/pose"/>
+</node> -->
+
+
+
+
+	<node type="rviz" name="rviz" pkg="rviz" args="
+  -d $(find online_motion_planner)/rviz/dynamic_motion_planner_vis.rviz" />
+
+</launch>

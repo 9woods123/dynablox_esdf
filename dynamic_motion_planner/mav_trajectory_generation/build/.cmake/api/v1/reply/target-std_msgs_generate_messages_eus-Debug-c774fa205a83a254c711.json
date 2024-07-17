@@ -1,0 +1,58 @@
+{
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"find_package"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/std_msgs/cmake/std_msgsConfig.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"mav_trajectory_generation/mav_comm/mav_state_machine_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 76,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 184,
+				"parent" : 4
+			}
+		]
+	},
+	"id" : "std_msgs_generate_messages_eus::@a7659705c19a5f14161e",
+	"name" : "std_msgs_generate_messages_eus",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_state_machine_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_state_machine_msgs"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

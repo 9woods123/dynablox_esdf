@@ -1,0 +1,482 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"install",
+			"catkin_generate_environment",
+			"include",
+			"find_package",
+			"catkin_install_python",
+			"_catkin_package",
+			"catkin_package",
+			"cs_install",
+			"cs_export"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_generate_environment.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/all.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"/home/woods/uuv/dynamic_motion_planning/dynablox_ws/devel/share/catkin_simple/cmake/catkin_simpleConfig.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_install_python.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_package.cmake",
+			"/home/woods/uuv/dynamic_motion_planning/dynablox_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"file" : 4,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 197,
+				"parent" : 2
+			},
+			{
+				"file" : 3,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 20,
+				"parent" : 4
+			},
+			{
+				"file" : 2,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 190,
+				"parent" : 6
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 85,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 97,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 6,
+				"line" : 59,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 115,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 19
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 140,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 21
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 7,
+				"line" : 102,
+				"parent" : 23
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 450,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 25
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 521,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 27
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 529,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 29
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 87,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 171,
+				"parent" : 31
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 32
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 179,
+				"parent" : 31
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 34
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 190,
+				"parent" : 31
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 36
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 8,
+				"line" : 214,
+				"parent" : 38
+			},
+			{
+				"command" : 6,
+				"file" : 7,
+				"line" : 102,
+				"parent" : 39
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 450,
+				"parent" : 40
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 41
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 521,
+				"parent" : 40
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 43
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 529,
+				"parent" : 40
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 45
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/_setup_util.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/env.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/setup.bash",
+				"build/catkin_generated/installspace/local_setup.bash"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/setup.sh",
+				"build/catkin_generated/installspace/local_setup.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/setup.zsh",
+				"build/catkin_generated/installspace/local_setup.zsh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
+			"destination" : "/usr/local",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/.rosinstall"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/hybrid_astar.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "share/hybrid_astar/cmake",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/hybrid_astarConfig.cmake",
+				"build/catkin_generated/installspace/hybrid_astarConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Unspecified",
+			"destination" : "share/hybrid_astar",
+			"paths" : 
+			[
+				"package.xml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 33,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"devel/lib/libhybrid_astar.so"
+			],
+			"targetId" : "hybrid_astar::@6890427a1f51a3e7e1df",
+			"targetIndex" : 34,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 35,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 37,
+			"component" : "Unspecified",
+			"destination" : "share/hybrid_astar/launch",
+			"paths" : 
+			[
+				{
+					"from" : "launch",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 42,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/hybrid_astar.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 44,
+			"component" : "Unspecified",
+			"destination" : "share/hybrid_astar/cmake",
+			"paths" : 
+			[
+				"build/catkin_generated/installspace/hybrid_astarConfig.cmake",
+				"build/catkin_generated/installspace/hybrid_astarConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 46,
+			"component" : "Unspecified",
+			"destination" : "share/hybrid_astar",
+			"paths" : 
+			[
+				"package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

@@ -1,0 +1,8 @@
+prefix=/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel
+
+Name: test_msgs
+Description: Description of test_msgs
+Version: 0.0.0
+Cflags: -I/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

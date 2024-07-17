@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/woods/uuv/mapping_ws/src/path_planner/cmake-build-debug/devel/setup.sh

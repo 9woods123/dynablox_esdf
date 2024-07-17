@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/catkin_boost_python_buildtool" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_grpc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_simple" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_simple/test/scenarios/hello_world/catkin_simple" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dynablox" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/eigen_catkin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/eigen_checks" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gflags_catkin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/glog_catkin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lidar_undistortion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/minkindr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/minkindr_ros" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/numpy_eigen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ouster-ros" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ouster-ros/ouster-sdk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/protobuf_catkin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/voxblox" vcs="Git" />
+  </component>
+</project>

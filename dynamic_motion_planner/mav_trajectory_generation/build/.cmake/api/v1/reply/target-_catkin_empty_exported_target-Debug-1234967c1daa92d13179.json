@@ -1,0 +1,47 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"find_package"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"mav_trajectory_generation/mav_comm/mav_comm/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 115,
+				"parent" : 2
+			}
+		]
+	},
+	"id" : "_catkin_empty_exported_target::@8137d8369a8a4bef00eb",
+	"name" : "_catkin_empty_exported_target",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_comm",
+		"source" : "mav_trajectory_generation/mav_comm/mav_comm"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

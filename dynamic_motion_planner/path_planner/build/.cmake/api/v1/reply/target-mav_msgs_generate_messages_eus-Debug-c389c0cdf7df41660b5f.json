@@ -1,0 +1,66 @@
+{
+	"backtrace" : 6,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"find_package",
+			"catkin_simple"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/dynamic_motion_planning/motion_planner_ws/devel/share/mav_msgs/cmake/mav_msgsConfig.cmake",
+			"/home/woods/uuv/dynamic_motion_planning/motion_planner_ws/devel/share/mav_trajectory_generation/cmake/mav_trajectory_generationConfig.cmake",
+			"/home/woods/uuv/dynamic_motion_planning/dynablox_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 38,
+				"parent" : 1
+			},
+			{
+				"file" : 1,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 197,
+				"parent" : 3
+			},
+			{
+				"file" : 0,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 184,
+				"parent" : 5
+			}
+		]
+	},
+	"id" : "mav_msgs_generate_messages_eus::@6890427a1f51a3e7e1df",
+	"name" : "mav_msgs_generate_messages_eus",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,371 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "devel/lib/mav_trajectory_generation/test_polynomial"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_catkin_add_executable_with_google_test",
+			"_catkin_add_google_test",
+			"catkin_add_gtest",
+			"link_directories",
+			"target_link_libraries",
+			"cxx_library_with_type",
+			"cxx_library",
+			"add_definitions",
+			"configure_shared_library_build_settings",
+			"include",
+			"find_package",
+			"include_directories",
+			"catkin_simple"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/test/gtest.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt",
+			"/usr/src/googletest/googletest/cmake/internal_utils.cmake",
+			"/usr/src/googletest/googletest/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/tools/libraries.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/all.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"CMakeLists.txt",
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 180,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 186,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 53,
+				"parent" : 0
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 90,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 172,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 159,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 11,
+				"file" : 7,
+				"line" : 58,
+				"parent" : 13
+			},
+			{
+				"file" : 6,
+				"parent" : 14
+			},
+			{
+				"command" : 10,
+				"file" : 6,
+				"line" : 20,
+				"parent" : 15
+			},
+			{
+				"file" : 5,
+				"parent" : 16
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 174,
+				"parent" : 17
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 18,
+				"parent" : 18
+			},
+			{
+				"command" : 13,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 12,
+				"file" : 8,
+				"line" : 57,
+				"parent" : 20
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++11 -std=c++11 -g   -std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 19,
+					"define" : "ROS_BUILD_SHARED_LIBS=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 21,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_trajectory_generation/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_comm/mav_msgs/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/woods/uuv/test_ws/devel/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/woods/uuv/test_ws/src/eigen_checks/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/opt/ros/melodic/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/opt/ros/melodic/share/nlopt/cmake/../../../include/nlopt"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/usr/src/googletest/googletest/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "gtest::@91549fa14b017862b6ac"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "mav_trajectory_generation::@4b21fcb9a33f9780df9d"
+		}
+	],
+	"id" : "test_polynomial::@4b21fcb9a33f9780df9d",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++11 -std=c++11 -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-L/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/gtest",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/gtest:/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/gtest/googlemock/gtest:/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/lib:/home/woods/uuv/test_ws/devel/lib:/opt/ros/melodic/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "gtest/googlemock/gtest/libgtest.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "devel/lib/libmav_trajectory_generation.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/home/woods/uuv/test_ws/devel/lib/libeigen_checks.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lglog",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/home/woods/uuv/test_ws/devel/lib/libgflags.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/opt/ros/melodic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/opt/ros/melodic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_system",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_thread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_chrono",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_date_time",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_atomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/opt/ros/melodic/lib/libnlopt_cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "-lyaml-cpp",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_polynomial",
+	"nameOnDisk" : "test_polynomial",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/test/test_polynomial.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

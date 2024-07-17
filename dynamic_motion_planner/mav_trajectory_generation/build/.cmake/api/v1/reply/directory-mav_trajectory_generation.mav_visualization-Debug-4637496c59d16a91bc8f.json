@@ -1,0 +1,224 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"install",
+			"cs_install",
+			"_catkin_package",
+			"catkin_package",
+			"cs_export"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_visualization/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_package.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 171,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 179,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 190,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 214,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 102,
+				"parent" : 9
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 450,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 521,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 529,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 15
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"devel/lib/libmav_visualization.so"
+			],
+			"targetId" : "mav_visualization::@85162634e0f1754c68b9",
+			"targetIndex" : 144,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/mav_visualization",
+			"paths" : 
+			[
+				"devel/lib/mav_visualization/hexacopter_publisher"
+			],
+			"targetId" : "hexacopter_publisher::@85162634e0f1754c68b9",
+			"targetIndex" : 85,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/mav_visualization",
+			"paths" : 
+			[
+				"devel/lib/mav_visualization/leica_publisher"
+			],
+			"targetId" : "leica_publisher::@85162634e0f1754c68b9",
+			"targetIndex" : 88,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "mav_trajectory_generation/mav_visualization/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "share/mav_visualization/meshes",
+			"paths" : 
+			[
+				{
+					"from" : "mav_trajectory_generation/mav_visualization/meshes",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_visualization/catkin_generated/installspace/mav_visualization.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "share/mav_visualization/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_visualization/catkin_generated/installspace/mav_visualizationConfig.cmake",
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_visualization/catkin_generated/installspace/mav_visualizationConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "share/mav_visualization",
+			"paths" : 
+			[
+				"mav_trajectory_generation/mav_visualization/package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_visualization",
+		"source" : "mav_trajectory_generation/mav_visualization"
+	}
+}

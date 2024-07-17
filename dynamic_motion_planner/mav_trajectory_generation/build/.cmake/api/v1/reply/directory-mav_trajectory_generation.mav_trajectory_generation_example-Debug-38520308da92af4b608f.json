@@ -1,0 +1,212 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"install",
+			"cs_install",
+			"_catkin_package",
+			"catkin_package",
+			"cs_export"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation_example/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_package.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 171,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 179,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 190,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 214,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 102,
+				"parent" : 9
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 450,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 521,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 529,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 15
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/mav_trajectory_generation_example",
+			"paths" : 
+			[
+				"devel/lib/mav_trajectory_generation_example/trajectory_generation_example"
+			],
+			"targetId" : "trajectory_generation_example::@7be381bd186488e2601c",
+			"targetIndex" : 248,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/mav_trajectory_generation_example",
+			"paths" : 
+			[
+				"devel/lib/mav_trajectory_generation_example/trajectory_generation_6dof_example"
+			],
+			"targetId" : "trajectory_generation_6dof_example::@7be381bd186488e2601c",
+			"targetIndex" : 247,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "mav_trajectory_generation/mav_trajectory_generation_example/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "share/mav_trajectory_generation_example/launch",
+			"paths" : 
+			[
+				{
+					"from" : "mav_trajectory_generation/mav_trajectory_generation_example/launch",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation_example/catkin_generated/installspace/mav_trajectory_generation_example.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "share/mav_trajectory_generation_example/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation_example/catkin_generated/installspace/mav_trajectory_generation_exampleConfig.cmake",
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation_example/catkin_generated/installspace/mav_trajectory_generation_exampleConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "share/mav_trajectory_generation_example",
+			"paths" : 
+			[
+				"mav_trajectory_generation/mav_trajectory_generation_example/package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation_example",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation_example"
+	}
+}

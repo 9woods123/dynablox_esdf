@@ -1,0 +1,593 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "devel/lib/mav_visualization/hexacopter_publisher"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"cs_add_executable",
+			"_install",
+			"install",
+			"cs_install",
+			"target_link_libraries",
+			"add_dependencies",
+			"add_definitions",
+			"include",
+			"find_package",
+			"catkin_simple",
+			"configure_shared_library_build_settings",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_visualization/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/opt/ros/melodic/share/rosconsole/cmake/rosconsole-extras.cmake",
+			"/opt/ros/melodic/share/rosconsole/cmake/rosconsoleConfig.cmake",
+			"/opt/ros/melodic/share/roscpp/cmake/roscppConfig.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/tools/libraries.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/all.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 13,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 135,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 1
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 9
+			},
+			{
+				"file" : 5,
+				"parent" : 10
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 197,
+				"parent" : 11
+			},
+			{
+				"file" : 4,
+				"parent" : 12
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 222,
+				"parent" : 13
+			},
+			{
+				"file" : 3,
+				"parent" : 14
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 12,
+				"parent" : 15
+			},
+			{
+				"file" : 9
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 58,
+				"parent" : 17
+			},
+			{
+				"file" : 8,
+				"parent" : 18
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 20,
+				"parent" : 19
+			},
+			{
+				"file" : 7,
+				"parent" : 20
+			},
+			{
+				"command" : 11,
+				"file" : 7,
+				"line" : 174,
+				"parent" : 21
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 18,
+				"parent" : 22
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 15
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 9
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g   -std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 16,
+					"define" : "ROSCONSOLE_BACKEND_LOG4CXX"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "ROS_BUILD_SHARED_LIBS=1"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "ROS_PACKAGE_NAME=\"mav_visualization\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 25,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_visualization/include"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/opt/ros/melodic/include"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/usr/include/eigen3"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_cpp::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_eus::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_lisp::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_nodejs::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_py::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "roscpp_generate_messages_cpp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "roscpp_generate_messages_eus::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "roscpp_generate_messages_lisp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "roscpp_generate_messages_nodejs::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "roscpp_generate_messages_py::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "rosgraph_msgs_generate_messages_cpp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "rosgraph_msgs_generate_messages_eus::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "rosgraph_msgs_generate_messages_lisp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "rosgraph_msgs_generate_messages_nodejs::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "rosgraph_msgs_generate_messages_py::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_cpp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_eus::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_lisp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_nodejs::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_py::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "visualization_msgs_generate_messages_cpp::@85162634e0f1754c68b9"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "visualization_msgs_generate_messages_eus::@85162634e0f1754c68b9"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "visualization_msgs_generate_messages_lisp::@85162634e0f1754c68b9"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "visualization_msgs_generate_messages_nodejs::@85162634e0f1754c68b9"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "visualization_msgs_generate_messages_py::@85162634e0f1754c68b9"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "mav_visualization::@85162634e0f1754c68b9"
+		}
+	],
+	"id" : "hexacopter_publisher::@85162634e0f1754c68b9",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "lib/mav_visualization"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/opt/ros/melodic/lib:/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libeigen_conversions.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_filesystem",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole_log4cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole_backend_interface.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog4cxx",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_regex",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libxmlrpcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_system",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_thread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_chrono",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_date_time",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_atomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "devel/lib/libmav_visualization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libeigen_conversions.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_filesystem",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole_log4cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librosconsole_backend_interface.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog4cxx",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_regex",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libxmlrpcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_system",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_thread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_chrono",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_date_time",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_atomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "hexacopter_publisher",
+	"nameOnDisk" : "hexacopter_publisher",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_visualization",
+		"source" : "mav_trajectory_generation/mav_visualization"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_visualization/src/hexacopter_publisher.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

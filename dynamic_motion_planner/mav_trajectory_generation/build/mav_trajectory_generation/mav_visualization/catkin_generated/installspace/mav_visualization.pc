@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: mav_visualization
+Description: Description of mav_visualization
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmav_visualization
+Requires: cmake_modules eigen_catkin eigen_conversions roscpp visualization_msgs

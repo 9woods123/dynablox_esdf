@@ -1,0 +1,8 @@
+prefix=/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel
+
+Name: mav_trajectory_generation
+Description: Description of mav_trajectory_generation
+Version: 0.0.0
+Cflags: -I/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_trajectory_generation/include
+Libs: -L${prefix}/lib -lmav_trajectory_generation
+Requires: cmake_modules eigen_catkin eigen_checks glog_catkin mav_msgs nlopt

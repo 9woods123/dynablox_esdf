@@ -1,0 +1,480 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "devel/lib/libmav_trajectory_generation.so"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"cs_add_library",
+			"_install",
+			"install",
+			"cs_install",
+			"target_link_libraries",
+			"add_dependencies",
+			"add_definitions",
+			"configure_shared_library_build_settings",
+			"include",
+			"find_package",
+			"include_directories",
+			"catkin_simple"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/tools/libraries.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/all.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 150,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 13,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 152,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 156,
+				"parent" : 1
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 10,
+				"file" : 6,
+				"line" : 58,
+				"parent" : 9
+			},
+			{
+				"file" : 5,
+				"parent" : 10
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 20,
+				"parent" : 11
+			},
+			{
+				"file" : 4,
+				"parent" : 12
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 174,
+				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 18,
+				"parent" : 14
+			},
+			{
+				"command" : 12,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 16
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++11 -std=c++11 -g -fPIC   -std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 15,
+					"define" : "ROS_BUILD_SHARED_LIBS=1"
+				},
+				{
+					"define" : "mav_trajectory_generation_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_trajectory_generation/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/mav_comm/mav_msgs/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/woods/uuv/test_ws/devel/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/woods/uuv/test_ws/src/eigen_checks/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/opt/ros/melodic/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/opt/ros/melodic/share/nlopt/cmake/../../../include/nlopt"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/usr/include/eigen3"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_cpp::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_eus::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_lisp::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_nodejs::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "std_msgs_generate_messages_py::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_cpp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_eus::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_lisp::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_nodejs::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometry_msgs_generate_messages_py::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_msgs_generate_messages_cpp::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_msgs_generate_messages_eus::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_msgs_generate_messages_lisp::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_msgs_generate_messages_nodejs::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_msgs_generate_messages_py::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_cpp::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_eus::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_lisp::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_nodejs::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_py::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "libnlopt_cxx::@4b21fcb9a33f9780df9d"
+		}
+	],
+	"id" : "mav_trajectory_generation::@4b21fcb9a33f9780df9d",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 5,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/woods/uuv/test_ws/devel/lib:/opt/ros/melodic/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/home/woods/uuv/test_ws/devel/lib/libeigen_checks.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lglog",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/home/woods/uuv/test_ws/devel/lib/libgflags.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_system",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_thread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_chrono",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_date_time",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lboost_atomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/ros/melodic/lib/libnlopt_cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-lyaml-cpp",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "mav_trajectory_generation",
+	"nameOnDisk" : "libmav_trajectory_generation.so",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/motion_defines.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/polynomial.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/segment.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/timing.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/trajectory.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/trajectory_sampling.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/vertex.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/io.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "mav_trajectory_generation/mav_trajectory_generation/src/rpoly/rpoly_ak1.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

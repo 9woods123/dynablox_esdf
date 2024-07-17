@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: mav_trajectory_generation
+Description: Description of mav_trajectory_generation
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmav_trajectory_generation
+Requires: cmake_modules eigen_catkin eigen_checks glog_catkin mav_msgs nlopt

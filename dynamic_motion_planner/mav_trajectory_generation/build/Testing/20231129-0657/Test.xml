@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231129-0657-Experimental"
+	Name="woods-Legion-Y9000X-IAH7"
+	Generator="ctest-3.26.2"
+	CompilerName="/usr/bin/clang++"
+	CompilerVersion="6.0.0"
+	OSName="Linux"
+	Hostname="woods-Legion-Y9000X-IAH7"
+	OSRelease="5.4.0-125-generic"
+	OSVersion="#141~18.04.1-Ubuntu SMP Thu Aug 11 20:15:56 UTC 2022"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="154"
+	ProcessorCacheSize="24576"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="14"
+	TotalVirtualMemory="18118"
+	TotalPhysicalMemory="15814"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3545.53"
+	>
+	<Testing>
+		<StartDateTime>Nov 29 14:57 CST</StartDateTime>
+		<StartTestTime>1701241064</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 29 14:57 CST</EndDateTime>
+		<EndTestTime>1701241064</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

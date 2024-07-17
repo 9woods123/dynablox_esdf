@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hybrid_astar</name>
+  <version>0.0.0</version>
+  <description>The hybrid_astar package</description>
+  <maintainer email="kurzer@kth.se">Karl Kurzer</maintainer>
+  <license>BSD</license>
+  <author email="kurzer@kth.se">Karl Kurzer</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <depend>eigen_catkin</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>voxblox_ros</depend>
+  <depend>octomap_msgs</depend>
+  <depend>uuv_control_msgs</depend>
+  <depend>tf</depend>
+  <depend>mav_trajectory_generation</depend>
+  <depend>mav_msgs</depend>
+
+
+</package>

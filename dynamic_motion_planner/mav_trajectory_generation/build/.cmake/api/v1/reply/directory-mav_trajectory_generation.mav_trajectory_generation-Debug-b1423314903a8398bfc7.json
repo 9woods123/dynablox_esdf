@@ -1,0 +1,187 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"install",
+			"cs_install",
+			"_catkin_package",
+			"catkin_package",
+			"cs_export"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/custom_install.cmake",
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/catkin_package.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 171,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 179,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 214,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 102,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 450,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 9
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 521,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 529,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 13
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"devel/lib/libmav_trajectory_generation.so"
+			],
+			"targetId" : "mav_trajectory_generation::@4b21fcb9a33f9780df9d",
+			"targetIndex" : 139,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/mav_trajectory_generation",
+			"paths" : 
+			[
+				"devel/lib/mav_trajectory_generation/polynomial_timing_evaluation"
+			],
+			"targetId" : "polynomial_timing_evaluation::@4b21fcb9a33f9780df9d",
+			"targetIndex" : 170,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "mav_trajectory_generation/mav_trajectory_generation/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation/catkin_generated/installspace/mav_trajectory_generation.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "share/mav_trajectory_generation/cmake",
+			"paths" : 
+			[
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation/catkin_generated/installspace/mav_trajectory_generationConfig.cmake",
+				"mav_trajectory_generation/build/mav_trajectory_generation/mav_trajectory_generation/catkin_generated/installspace/mav_trajectory_generationConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "share/mav_trajectory_generation",
+			"paths" : 
+			[
+				"mav_trajectory_generation/mav_trajectory_generation/package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation"
+	}
+}

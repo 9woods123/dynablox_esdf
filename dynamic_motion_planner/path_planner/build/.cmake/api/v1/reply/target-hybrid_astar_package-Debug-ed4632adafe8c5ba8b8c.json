@@ -1,0 +1,71 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"catkin_simple",
+			"add_dependencies",
+			"cs_add_targets_to_package",
+			"cs_add_library"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/dynamic_motion_planning/dynablox_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 4
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "hybrid_astar::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "hybrid_astar_package::@6890427a1f51a3e7e1df",
+	"name" : "hybrid_astar_package",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,93 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"catkin_simple",
+			"add_dependencies",
+			"cs_add_targets_to_package",
+			"cs_add_executable"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation_example/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 7
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "trajectory_generation_example::@7be381bd186488e2601c"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_generation_6dof_example::@7be381bd186488e2601c"
+		}
+	],
+	"id" : "mav_trajectory_generation_example_package::@7be381bd186488e2601c",
+	"name" : "mav_trajectory_generation_example_package",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation_example",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation_example"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45e14686-03da-41a4-99f5-91a9ef3da1fa" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/dynablox/drift_simulation/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dynablox/drift_simulation/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynablox/dynablox_ros/config/rviz/default.rviz" beforeDir="false" afterPath="$PROJECT_DIR$/dynablox/dynablox_ros/config/rviz/default.rviz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynablox/dynablox_ros/include/dynablox_ros/motion_detector.h" beforeDir="false" afterPath="$PROJECT_DIR$/dynablox/dynablox_ros/include/dynablox_ros/motion_detector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynablox/dynablox_ros/launch/run_experiment.launch" beforeDir="false" afterPath="$PROJECT_DIR$/dynablox/dynablox_ros/launch/run_experiment.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynablox/dynablox_ros/src/motion_detector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dynablox/dynablox_ros/src/motion_detector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ouster-ros/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ouster-ros/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voxblox/voxblox_ros/src/esdf_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/voxblox/voxblox_ros/src/esdf_server.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voxblox/voxblox_ros/src/tsdf_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/voxblox/voxblox_ros/src/tsdf_server.cc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/catkin_boost_python_buildtool" />
+  </component>
+  <component name="ProjectId" id="2hupjO2jcAM6xe4c1E3YocUxDbp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/woods/uuv/dynablox_ws/src"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="45e14686-03da-41a4-99f5-91a9ef3da1fa" name="变更" comment="" />
+      <created>1718453950140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718453950140</updated>
+    </task>
+    <servers />
+  </component>
+</project>

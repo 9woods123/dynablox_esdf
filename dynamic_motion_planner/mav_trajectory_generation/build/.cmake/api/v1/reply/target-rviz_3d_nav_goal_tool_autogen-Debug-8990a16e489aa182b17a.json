@@ -1,0 +1,58 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"rviz-3d-nav-goal-tool/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "rviz_3d_nav_goal_tool_autogen::@547d49f1eae84cb3efba",
+	"isGeneratorProvided" : true,
+	"name" : "rviz_3d_nav_goal_tool_autogen",
+	"paths" : 
+	{
+		"build" : "rviz-3d-nav-goal-tool",
+		"source" : "rviz-3d-nav-goal-tool"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/rviz-3d-nav-goal-tool/CMakeFiles/rviz_3d_nav_goal_tool_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/rviz-3d-nav-goal-tool/CMakeFiles/rviz_3d_nav_goal_tool_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

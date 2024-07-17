@@ -1,0 +1,58 @@
+{
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"find_package"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/trajectory_msgs/cmake/trajectory_msgsConfig.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"mav_trajectory_generation/mav_comm/mav_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 76,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 184,
+				"parent" : 4
+			}
+		]
+	},
+	"id" : "trajectory_msgs_generate_messages_nodejs::@c4cdea4336a7b1af7337",
+	"name" : "trajectory_msgs_generate_messages_nodejs",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_msgs"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

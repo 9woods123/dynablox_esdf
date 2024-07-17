@@ -1,0 +1,7 @@
+# online_motion_planner_service.srv
+
+# 请求消息
+int32 request_variable
+
+# 响应消息
+int32 response_variable

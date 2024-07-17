@@ -1,0 +1,69 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_msgs/cmake/mav_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"mav_trajectory_generation/mav_comm/mav_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 236,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 237,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "mav_msgs_generate_messages_eus::@c4cdea4336a7b1af7337"
+		}
+	],
+	"id" : "mav_msgs_geneus::@c4cdea4336a7b1af7337",
+	"name" : "mav_msgs_geneus",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_msgs"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

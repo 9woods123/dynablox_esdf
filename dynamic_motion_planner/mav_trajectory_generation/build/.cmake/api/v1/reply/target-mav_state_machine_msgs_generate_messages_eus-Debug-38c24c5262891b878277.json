@@ -1,0 +1,141 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_state_machine_msgs/cmake/mav_state_machine_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"mav_trajectory_generation/mav_comm/mav_state_machine_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 260,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_eus::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "_mav_state_machine_msgs_generate_messages_check_deps_StartStopTask::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_mav_state_machine_msgs_generate_messages_check_deps_RunTaskService::@a7659705c19a5f14161e"
+		}
+	],
+	"id" : "mav_state_machine_msgs_generate_messages_eus::@a7659705c19a5f14161e",
+	"name" : "mav_state_machine_msgs_generate_messages_eus",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_state_machine_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_state_machine_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_state_machine_msgs/CMakeFiles/mav_state_machine_msgs_generate_messages_eus",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_state_machine_msgs/CMakeFiles/mav_state_machine_msgs_generate_messages_eus.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_state_machine_msgs/manifest.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_state_machine_msgs/msg/StartStopTask.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_state_machine_msgs/srv/RunTaskService.l.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,15 @@
+-I/home/woods/uuv/motion_planner_ws/src/rviz-3d-nav-goal-tool/include
+-I/opt/ros/melodic/include
+-I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="rviz-3d-nav-goal-tool"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-DQT_NO_KEYWORDS
+-o
+/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/rviz-3d-nav-goal-tool/include/rviz-3d-nav-goal-tool/moc_pose_tool.cpp
+/home/woods/uuv/motion_planner_ws/src/rviz-3d-nav-goal-tool/include/rviz-3d-nav-goal-tool/pose_tool.hpp

@@ -1,0 +1,8 @@
+prefix=/home/woods/uuv/mapping_ws/src/path_planner/cmake-build-debug/devel
+
+Name: hybrid_astar
+Description: Description of hybrid_astar
+Version: 0.0.0
+Cflags: -I/home/woods/uuv/mapping_ws/src/path_planner/include
+Libs: -L${prefix}/lib -lhybrid_astar
+Requires: eigen_catkin roscpp rospy std_msgs visualization_msgs voxblox_ros octomap_msgs uuv_control_msgs tf mav_trajectory_generation mav_msgs

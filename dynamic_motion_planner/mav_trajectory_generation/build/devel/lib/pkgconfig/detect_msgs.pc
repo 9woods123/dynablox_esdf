@@ -1,0 +1,8 @@
+prefix=/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel
+
+Name: detect_msgs
+Description: Description of detect_msgs
+Version: 0.0.0
+Cflags: -I/home/woods/uuv/motion_planner_ws/src/mav_trajectory_generation/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs geometry_msgs message_runtime

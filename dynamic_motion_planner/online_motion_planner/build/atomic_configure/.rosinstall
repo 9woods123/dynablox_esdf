@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/woods/uuv/dynamic_motion_planning/motion_planner_ws/src/online_motion_planner/build/devel/setup.sh

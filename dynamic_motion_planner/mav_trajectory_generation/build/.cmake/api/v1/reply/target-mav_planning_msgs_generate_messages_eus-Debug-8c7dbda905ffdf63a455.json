@@ -1,0 +1,351 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_planning_msgs/cmake/mav_planning_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"mav_trajectory_generation/mav_comm/mav_planning_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 288,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 728,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 722,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 734,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 731,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 725,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 295,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 297,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 299,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 301,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 303,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 305,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 307,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 309,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 311,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 313,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 315,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 317,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_eus::@a7659705c19a5f14161e"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "geometry_msgs_generate_messages_eus::@256552f3f980f1db6913"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "trajectory_msgs_generate_messages_eus::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "mav_msgs_generate_messages_eus::@c4cdea4336a7b1af7337"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "sensor_msgs_generate_messages_eus::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_Polygon2D::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolygonService::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PlannerService::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PointCloudWithPose::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory4D::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_ChangeNameService::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_Point2D::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolynomialSegment::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolygonWithHolesStamped::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolygonWithHoles::@6d1848a0ba35de9b2d11"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "_mav_planning_msgs_generate_messages_check_deps_PolynomialSegment4D::@6d1848a0ba35de9b2d11"
+		}
+	],
+	"id" : "mav_planning_msgs_generate_messages_eus::@6d1848a0ba35de9b2d11",
+	"name" : "mav_planning_msgs_generate_messages_eus",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_comm/mav_planning_msgs",
+		"source" : "mav_trajectory_generation/mav_comm/mav_planning_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_planning_msgs/CMakeFiles/mav_planning_msgs_generate_messages_eus",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/mav_trajectory_generation/mav_comm/mav_planning_msgs/CMakeFiles/mav_planning_msgs_generate_messages_eus.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/manifest.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/Point2D.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PointCloudWithPose.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/Polygon2D.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHoles.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment4D.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/srv/ChangeNameService.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/srv/PlannerService.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "mav_trajectory_generation/build/devel/share/roseus/ros/mav_planning_msgs/srv/PolygonService.l.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

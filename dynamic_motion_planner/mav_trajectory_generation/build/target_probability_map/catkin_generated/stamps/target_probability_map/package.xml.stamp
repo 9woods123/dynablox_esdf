@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>target_probability_map</name>
+  <version>0.0.0</version>
+  <description>The target_probability_map package</description>
+  <maintainer email="2726914442@qq.com">Tianyou Yu</maintainer>
+  <license>BSD</license>
+  <author email="2726914442@qq.com">Tianyou Yu</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <depend>eigen_catkin</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>detect_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+
+  <depend>tf</depend>
+
+
+</package>

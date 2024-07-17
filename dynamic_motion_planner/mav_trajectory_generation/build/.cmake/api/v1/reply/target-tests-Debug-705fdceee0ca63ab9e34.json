@@ -1,0 +1,151 @@
+{
+	"backtrace" : 7,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"find_package",
+			"add_dependencies",
+			"_catkin_add_google_test",
+			"catkin_add_gtest"
+		],
+		"files" : 
+		[
+			"/opt/ros/melodic/share/catkin/cmake/test/tests.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/all.cmake",
+			"/opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/melodic/share/catkin/cmake/test/gtest.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt",
+			"mav_trajectory_generation/mav_trajectory_generation_ros/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 20,
+				"parent" : 2
+			},
+			{
+				"file" : 1,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 164,
+				"parent" : 4
+			},
+			{
+				"file" : 0,
+				"parent" : 5
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 6
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 50,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 37,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 93,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 55,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 37,
+				"parent" : 12
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 93,
+				"parent" : 13
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 51,
+				"parent" : 15
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 37,
+				"parent" : 16
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 93,
+				"parent" : 17
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 11,
+			"id" : "test_polynomial::@4b21fcb9a33f9780df9d"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "test_polynomial_optimization::@4b21fcb9a33f9780df9d"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "test_feasibility::@47d77292c8070c09efd0"
+		}
+	],
+	"id" : "tests::@6890427a1f51a3e7e1df",
+	"name" : "tests",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

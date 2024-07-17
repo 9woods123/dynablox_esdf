@@ -1,0 +1,16 @@
+<launch>
+ <!-- Turn on hybrid_astar node -->
+ <node name="hybrid_astar" pkg="hybrid_astar" type="hybrid_astar" output="screen" /> 
+ <node name="tf_broadcaster" pkg="hybrid_astar" type="tf_broadcaster" />
+ <node pkg="tf" type="static_transform_publisher" name="static_transform" args="0 0 0 0 0 0 world map 20" />
+ <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hybrid_astar)/launch/config.rviz" /> -->
+
+
+   <!-- <node pkg="octomap_server" type="octomap_server_node" name="octomap_server" output="screen">
+    <param name="octomap_file" value="/home/woods/uuv/dave_ws/src/eca_a9/eca_a9_gazebo/map/woods_map.bt"/>
+    <param name="frame_id" value="map"/>
+    <param name="publish_all" value="true"/>
+  </node> -->
+
+
+</launch>

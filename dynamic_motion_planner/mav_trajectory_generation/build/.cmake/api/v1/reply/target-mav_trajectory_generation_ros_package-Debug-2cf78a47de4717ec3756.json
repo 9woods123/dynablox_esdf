@@ -1,0 +1,116 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"catkin_simple",
+			"add_dependencies",
+			"cs_add_targets_to_package",
+			"cs_add_library",
+			"cs_add_executable"
+		],
+		"files" : 
+		[
+			"/home/woods/uuv/test_ws/devel/share/catkin_simple/cmake/catkin_simple-extras.cmake",
+			"mav_trajectory_generation/mav_trajectory_generation_ros/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 9
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 10
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "mav_trajectory_generation_ros::@47d77292c8070c09efd0"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "trajectory_sampler_node::@47d77292c8070c09efd0"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "time_evaluation_node::@47d77292c8070c09efd0"
+		}
+	],
+	"id" : "mav_trajectory_generation_ros_package::@47d77292c8070c09efd0",
+	"name" : "mav_trajectory_generation_ros_package",
+	"paths" : 
+	{
+		"build" : "mav_trajectory_generation/mav_trajectory_generation_ros",
+		"source" : "mav_trajectory_generation/mav_trajectory_generation_ros"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
