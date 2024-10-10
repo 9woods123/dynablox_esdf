@@ -82,7 +82,7 @@ There is a [docker image](https://hub.docker.com/repository/docker/zhangkin/dyna
 4. Install ROS dependencies:
     ```bash
     cd ~/catkin_ws/src
-    vcs import . < ./dynablox/ssh.rosinstall --recursive 
+    vcs import . < ./dynablox_esdf/https.rosinstall --recursive 
     ```
 
 5. Build:
